@@ -1,0 +1,128 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling for a clean background */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main app container */
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+/* Sticker button styling */
+.sticker-button {
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sticker-button img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.sticker-button:hover {
+  background-color: #357abd;
+  transform: scale(1.05);
+}
+
+.sticker-button:active {
+  transform: scale(0.95);
+}
+
+/* Download button styling */
+.download-button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.download-button:active {
+  transform: scale(0.95);
+}
+
+/* Canvas styling */
+.canvas-container {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .sticker-button,
+  .download-button {
+    padding: 8px;
+  }
+
+  .sticker-button img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .download-button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
